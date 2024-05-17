@@ -9,13 +9,13 @@ import { XCircle } from 'react-feather';
 import { useTranslation } from 'react-i18next';
 import { useSortBy, useTable } from 'react-table';
 
+import { getClashAPIConfig } from '~/store/app';
 import { State } from '~/store/types';
 
 import * as connAPI from '../api/connections';
 import prettyBytes from '../misc/pretty-bytes';
-import { getClashAPIConfig } from '../store/app';
 import s from './ConnectionTable.module.scss';
-import MOdalCloseConnection from './ModalCloseAllConnections';
+import ModalCloseConnection from './ModalCloseAllConnections';
 import { connect } from './StateProvider';
 
 const sortById = { id: 'id', desc: true };
@@ -138,12 +138,12 @@ function Table({ data, columns, hiddenColumns, apiConfig }) {
           })}
         </tbody>
       </table>
-      <MOdalCloseConnection
+      <ModalCloseConnection
         confirm={'disconnect'}
         isOpen={showModalDisconnect}
         onRequestClose={() => setShowModalDisconnect(false)}
         primaryButtonOnTap={disconnectOperation}
-      ></MOdalCloseConnection>
+      ></ModalCloseConnection>
     </div>
   );
 }

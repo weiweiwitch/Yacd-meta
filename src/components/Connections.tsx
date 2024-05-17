@@ -167,6 +167,7 @@ function formatConnectionDataItem(
   };
   return ret;
 }
+
 function modifyChains(chains: string[]): string {
   if (!Array.isArray(chains) || chains.length === 0) {
     return '';
@@ -405,6 +406,7 @@ function Conn({ apiConfig }) {
               </span>
             </Tab>
           </TabList>
+
           <Select
             options={connIpSet}
             selected={filterSourceIpStr}
@@ -463,6 +465,7 @@ function Conn({ apiConfig }) {
             </TabPanel>
           </div>
         </div>
+
         <ModalCloseAllConnections
           isOpen={isCloseAllModalOpen}
           primaryButtonOnTap={closeAllConnections}
