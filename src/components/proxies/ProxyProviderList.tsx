@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import ContentHeader from '~/components/ContentHeader';
 import { ProxyProvider } from '~/components/proxies/ProxyProvider';
+import ContentHeader from '~/components/shared/ContentHeader';
 import { FormattedProxyProvider } from '~/store/types';
 
 export function ProxyProviderList({ items }: { items: FormattedProxyProvider[] }) {

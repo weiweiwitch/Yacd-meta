@@ -3,7 +3,7 @@ import { GitHub } from 'react-feather';
 import { useQuery } from 'react-query';
 
 import { fetchVersion } from '~/api/version';
-import ContentHeader from '~/components/ContentHeader';
+import ContentHeader from '~/components/shared/ContentHeader';
 import { connect } from '~/components/StateProvider';
 import { getClashAPIConfig } from '~/store/app';
 import { ClashAPIConfig } from '~/types';
@@ -44,7 +44,11 @@ function AboutImpl(props: Props) {
           }
           version={version.version}
           link={
-            version.meta && version.premium ? 'https://github.com/SagerNet/sing-box' : version.meta ? 'https://github.com/MetaCubeX/Clash.Meta' : 'https://github.com/Dreamacro/clash'
+            version.meta && version.premium
+              ? 'https://github.com/SagerNet/sing-box'
+              : version.meta
+              ? 'https://github.com/MetaCubeX/Clash.Meta'
+              : 'https://github.com/Dreamacro/clash'
           }
         />
       ) : null}

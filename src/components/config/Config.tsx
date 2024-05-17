@@ -9,7 +9,7 @@ import Select from '~/components/shared/Select';
 import { ClashGeneralConfig, DispatchFn, State } from '~/store/types';
 import { ClashAPIConfig } from '~/types';
 
-import { getClashAPIConfig, getLatencyTestUrl, getSelectedChartStyleIndex } from '../store/app';
+import { getClashAPIConfig, getLatencyTestUrl, getSelectedChartStyleIndex } from '../../store/app';
 import {
   fetchConfigs,
   flushFakeIPPool,
@@ -19,16 +19,16 @@ import {
   updateConfigs,
   updateGeoDatabasesFile,
   upgradeCore,
-} from '../store/configs';
-import { openModal } from '../store/modals';
-import Button from './Button';
+} from '../../store/configs';
+import { openModal } from '../../store/modals';
+import Button from '../Button';
+import Input, { SelfControlledInput } from '../Input';
+import { Selection2 } from '../Selection';
+import ContentHeader from '../shared/ContentHeader';
+import { connect, useStoreActions } from '../StateProvider';
+import Switch from '../SwitchThemed';
+import TrafficChartSample from '../TrafficChartSample';
 import s0 from './Config.module.scss';
-import ContentHeader from './ContentHeader';
-import Input, { SelfControlledInput } from './Input';
-import { Selection2 } from './Selection';
-import { connect, useStoreActions } from './StateProvider';
-import Switch from './SwitchThemed';
-import TrafficChartSample from './TrafficChartSample';
 
 const { useEffect, useState, useCallback, useRef } = React;
 

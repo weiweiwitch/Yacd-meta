@@ -12,14 +12,14 @@ import { State } from '~/store/types';
 
 import * as connAPI from '../../api/connections';
 import useRemainingViewPortHeight from '../../hooks/useRemainingViewPortHeight';
-import ContentHeader from '../ContentHeader';
 import Input from '../Input';
 import ModalCloseAllConnections from '../ModalCloseAllConnections';
 import ModalManageConnectionColumns from '../ModalManageConnectionColumns';
 import ModalSourceIP from '../ModalSourceIP';
+import ContentHeader from '../shared/ContentHeader';
 import { Action, Fab, position as fabPosition } from '../shared/Fab';
+import SvgYacd from '../shared/SvgYacd';
 import { connect } from '../StateProvider';
-import SvgYacd from '../SvgYacd';
 import s from './Connections.module.scss';
 import ConnectionTable from './ConnectionTable';
 

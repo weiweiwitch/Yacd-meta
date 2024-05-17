@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { State } from '~/store/types';
-
-import { fetchData } from '../api/memory';
-import { useLineChartMemory } from '../hooks/useLineChart';
+import { fetchData } from '~/api/memory';
+import { useLineChartMemory } from '~/hooks/useLineChart';
 import {
   chartJSResource,
   chartStyles,
   commonDataSetProps,
   memoryChartOptions,
-} from '../misc/chart-memory';
-import { getClashAPIConfig, getSelectedChartStyleIndex } from '../store/app';
+} from '~/misc/chart-memory';
+import { getClashAPIConfig, getSelectedChartStyleIndex } from '~/store/app';
+import { State } from '~/store/types';
+
 import s0 from './MemoryChart.module.scss';
 import { connect } from './StateProvider';
 
@@ -36,8 +36,6 @@ const mapState = (s: State) => ({
   apiConfig: getClashAPIConfig(s),
   selectedChartStyleIndex: getSelectedChartStyleIndex(s),
 });
-
-export default connect(mapState)(MemoryChart);
 
 function MemoryChart({ apiConfig, selectedChartStyleIndex }) {
   const ChartMod = chartJSResource.read();
@@ -68,3 +66,5 @@ function MemoryChart({ apiConfig, selectedChartStyleIndex }) {
     </div>
   );
 }
+
+export default connect(mapState)(MemoryChart);

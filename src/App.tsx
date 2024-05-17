@@ -22,8 +22,8 @@ import styles from './App.module.scss';
 const { lazy, Suspense } = React;
 
 const Connections = lazy(() => import('~/components/connections/Connections'));
-const Config = lazy(() => import('~/components/Config'));
-const Logs = lazy(() => import('~/components/Logs'));
+const Config = lazy(() => import('~/components/config/Config'));
+const Logs = lazy(() => import('~/components/logs/Logs'));
 const Proxies = lazy(() => import('~/components/proxies/Proxies'));
 const Rules = lazy(() => import('~/components/rules/Rules'));
 

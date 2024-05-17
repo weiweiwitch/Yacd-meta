@@ -9,8 +9,8 @@ import { ClashAPIConfig } from '~/types';
 import s0 from './APIConfig.module.scss';
 import Button from './Button';
 import Field from './Field';
+import SvgYacd from './shared/SvgYacd';
 import { connect } from './StateProvider';
-import SvgYacd from './SvgYacd';
 
 const { useState, useRef, useCallback, useEffect } = React;
 const Ok = 0;

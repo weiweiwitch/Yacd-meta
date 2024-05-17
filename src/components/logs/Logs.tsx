@@ -3,18 +3,18 @@ import { Pause, Play } from 'react-feather';
 import { useTranslation } from 'react-i18next';
 
 import { fetchLogs, reconnect as reconnectLogs, stop as stopLogs } from '~/api/logs';
-import ContentHeader from '~/components/ContentHeader';
-import LogSearch from '~/components/LogSearch';
+import LogSearch from '~/components/logs/LogSearch';
+import ContentHeader from '~/components/shared/ContentHeader';
+import SvgYacd from '~/components/shared/SvgYacd';
 import { connect, useStoreActions } from '~/components/StateProvider';
-import SvgYacd from '~/components/SvgYacd';
 import useRemainingViewPortHeight from '~/hooks/useRemainingViewPortHeight';
 import { getClashAPIConfig, getLogStreamingPaused } from '~/store/app';
 import { getLogLevel } from '~/store/configs';
 import { appendLog, getLogsForDisplay } from '~/store/logs';
 import { Log, State } from '~/store/types';
 
+import { Fab, position as fabPosition } from '../shared/Fab';
 import s from './Logs.module.scss';
-import { Fab, position as fabPosition } from './shared/Fab';
 
 const { useCallback, useEffect } = React;
 

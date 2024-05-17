@@ -3,13 +3,13 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Button from '~/components/Button';
-import ContentHeader from '~/components/ContentHeader';
 import { ClosePrevConns } from '~/components/proxies/ClosePrevConns';
 import { ProxyGroup } from '~/components/proxies/ProxyGroup';
 import { ProxyPageFab } from '~/components/proxies/ProxyPageFab';
 import { ProxyProviderList } from '~/components/proxies/ProxyProviderList';
 import Settings from '~/components/proxies/Settings';
 import BaseModal from '~/components/shared/BaseModal';
+import ContentHeader from '~/components/shared/ContentHeader';
 import { TextFilter } from '~/components/shared/TextFitler';
 import { connect, useStoreActions } from '~/components/StateProvider';
 import Equalizer from '~/components/svg/Equalizer';

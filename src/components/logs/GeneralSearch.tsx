@@ -3,9 +3,9 @@ import React, { useCallback, useMemo, useState } from 'react';
 import { Search as SearchIcon } from 'react-feather';
 import { useTranslation } from 'react-i18next';
 
-import s0 from './Search.module.scss';
+import s0 from './GeneralSearch.module.scss';
 
-function RuleSearch({ dispatch, searchText, updateSearchText }) {
+function GeneralSearch({ dispatch, searchText, updateSearchText }) {
   const { t } = useTranslation();
   const [text, setText] = useState(searchText);
   const updateSearchTextInternal = useCallback(
@@ -24,8 +24,8 @@ function RuleSearch({ dispatch, searchText, updateSearchText }) {
   };
 
   return (
-    <div className={s0.RuleSearch}>
-      <div className={s0.RuleSearchContainer}>
+    <div className={s0.GeneralSearch}>
+      <div className={s0.GeneralSearchContainer}>
         <div className={s0.inputWrapper}>
           <input
             type="text"
@@ -43,4 +43,4 @@ function RuleSearch({ dispatch, searchText, updateSearchText }) {
   );
 }
 
-export default RuleSearch;
+export default GeneralSearch;
