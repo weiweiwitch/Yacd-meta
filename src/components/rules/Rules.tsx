@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { areEqual, VariableSizeList } from 'react-window';
 
@@ -11,11 +12,11 @@ import { ruleFilterText } from '~/store/rules';
 import { State } from '~/store/types';
 import { ClashAPIConfig } from '~/types';
 
-import useRemainingViewPortHeight from '../hooks/useRemainingViewPortHeight';
-import ContentHeader from './ContentHeader';
+import useRemainingViewPortHeight from '../../hooks/useRemainingViewPortHeight';
+import ContentHeader from '../ContentHeader';
 import Rule from './Rule';
 import s from './Rules.module.scss';
-import { connect } from './StateProvider';
+import { connect } from '../StateProvider';
 
 const { memo } = React;
 

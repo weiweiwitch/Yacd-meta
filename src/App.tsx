@@ -25,7 +25,7 @@ const Connections = lazy(() => import('~/components/connections/Connections'));
 const Config = lazy(() => import('~/components/Config'));
 const Logs = lazy(() => import('~/components/Logs'));
 const Proxies = lazy(() => import('~/components/proxies/Proxies'));
-const Rules = lazy(() => import('~/components/Rules'));
+const Rules = lazy(() => import('~/components/rules/Rules'));
 
 const routes = [
   { path: '/', element: <Home /> },
