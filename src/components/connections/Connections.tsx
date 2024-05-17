@@ -7,21 +7,21 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 
 import { ConnectionItem } from '~/api/connections';
 import Select from '~/components/shared/Select';
+import { getClashAPIConfig } from '~/store/app';
 import { State } from '~/store/types';
 
-import * as connAPI from '../api/connections';
-import useRemainingViewPortHeight from '../hooks/useRemainingViewPortHeight';
-import { getClashAPIConfig } from '../store/app';
+import * as connAPI from '../../api/connections';
+import useRemainingViewPortHeight from '../../hooks/useRemainingViewPortHeight';
+import ContentHeader from '../ContentHeader';
+import Input from '../Input';
+import ModalCloseAllConnections from '../ModalCloseAllConnections';
+import ModalManageConnectionColumns from '../ModalManageConnectionColumns';
+import ModalSourceIP from '../ModalSourceIP';
+import { Action, Fab, position as fabPosition } from '../shared/Fab';
+import { connect } from '../StateProvider';
+import SvgYacd from '../SvgYacd';
 import s from './Connections.module.scss';
 import ConnectionTable from './ConnectionTable';
-import ContentHeader from './ContentHeader';
-import Input from './Input';
-import ModalCloseAllConnections from './ModalCloseAllConnections';
-import ModalManageConnectionColumns from './ModalManageConnectionColumns';
-import ModalSourceIP from './ModalSourceIP';
-import { Action, Fab, position as fabPosition } from './shared/Fab';
-import { connect } from './StateProvider';
-import SvgYacd from './SvgYacd';
 
 const { useEffect, useState, useRef, useCallback } = React;
 const ALL_SOURCE_IP = 'ALL_SOURCE_IP';

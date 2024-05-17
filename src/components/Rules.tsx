@@ -6,12 +6,12 @@ import { RuleProviderItem } from '~/components/rules/RuleProviderItem';
 import { useRuleAndProvider } from '~/components/rules/rules.hooks';
 import { RulesPageFab } from '~/components/rules/RulesPageFab';
 import { TextFilter } from '~/components/shared/TextFitler';
+import { getClashAPIConfig } from '~/store/app';
 import { ruleFilterText } from '~/store/rules';
 import { State } from '~/store/types';
 import { ClashAPIConfig } from '~/types';
 
 import useRemainingViewPortHeight from '../hooks/useRemainingViewPortHeight';
-import { getClashAPIConfig } from '../store/app';
 import ContentHeader from './ContentHeader';
 import Rule from './Rule';
 import s from './Rules.module.scss';

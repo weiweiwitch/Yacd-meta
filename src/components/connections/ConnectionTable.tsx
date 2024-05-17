@@ -12,11 +12,11 @@ import { useSortBy, useTable } from 'react-table';
 import { getClashAPIConfig } from '~/store/app';
 import { State } from '~/store/types';
 
-import * as connAPI from '../api/connections';
-import prettyBytes from '../misc/pretty-bytes';
+import * as connAPI from '../../api/connections';
+import prettyBytes from '../../misc/pretty-bytes';
+import ModalCloseConnection from '../ModalCloseAllConnections';
+import { connect } from '../StateProvider';
 import s from './ConnectionTable.module.scss';
-import ModalCloseConnection from './ModalCloseAllConnections';
-import { connect } from './StateProvider';
 
 const sortById = { id: 'id', desc: true };
 
