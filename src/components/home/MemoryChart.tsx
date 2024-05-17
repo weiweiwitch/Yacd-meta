@@ -12,8 +12,8 @@ import {
 import { getClashAPIConfig, getSelectedChartStyleIndex } from '~/store/app';
 import { State } from '~/store/types';
 
+import { connect } from '../StateProvider';
 import s0 from './MemoryChart.module.scss';
-import { connect } from './StateProvider';
 
 const { useMemo } = React;
 

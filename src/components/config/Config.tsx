@@ -6,10 +6,6 @@ import { useQuery } from 'react-query';
 import * as logsApi from '~/api/logs';
 import { fetchVersion } from '~/api/version';
 import Select from '~/components/shared/Select';
-import { ClashGeneralConfig, DispatchFn, State } from '~/store/types';
-import { ClashAPIConfig } from '~/types';
-
-import { getClashAPIConfig, getLatencyTestUrl, getSelectedChartStyleIndex } from '../../store/app';
 import {
   fetchConfigs,
   flushFakeIPPool,
@@ -19,16 +15,20 @@ import {
   updateConfigs,
   updateGeoDatabasesFile,
   upgradeCore,
-} from '../../store/configs';
-import { openModal } from '../../store/modals';
+} from '~/store/configs';
+import { openModal } from '~/store/modals';
+import { ClashGeneralConfig, DispatchFn, State } from '~/store/types';
+import { ClashAPIConfig } from '~/types';
+
+import { getClashAPIConfig, getLatencyTestUrl, getSelectedChartStyleIndex } from '../../store/app';
 import Button from '../Button';
 import Input, { SelfControlledInput } from '../Input';
 import { Selection2 } from '../Selection';
 import ContentHeader from '../shared/ContentHeader';
+import SwitchThemed from '../shared/SwitchThemed';
 import { connect, useStoreActions } from '../StateProvider';
-import Switch from '../SwitchThemed';
-import TrafficChartSample from '../TrafficChartSample';
 import s0 from './Config.module.scss';
+import TrafficChartSample from './TrafficChartSample';
 
 const { useEffect, useState, useCallback, useRef } = React;
 
@@ -282,7 +282,7 @@ function ConfigImpl({
           <div>
             <div className={s0.label}>{t('allow_lan')}</div>
             <div className={s0.wrapSwitch}>
-              <Switch
+              <SwitchThemed
                 name="allow-lan"
                 checked={configState['allow-lan']}
                 onChange={(value: boolean) =>
@@ -297,7 +297,7 @@ function ConfigImpl({
           <div>
             <div className={s0.label}>{t('tls_sniffing')}</div>
             <div className={s0.wrapSwitch}>
-              <Switch
+              <SwitchThemed
                 name="sniffing"
                 checked={configState['sniffing']}
                 onChange={(value: boolean) =>
@@ -319,7 +319,7 @@ function ConfigImpl({
                 <div>
                   <div className={s0.label}>{t('enable_tun_device')}</div>
                   <div className={s0.wrapSwitch}>
-                    <Switch
+                    <SwitchThemed
                       checked={configState['tun']?.enable}
                       onChange={(value: boolean) =>
                         handleInputOnChange({ name: 'enable', value: value })

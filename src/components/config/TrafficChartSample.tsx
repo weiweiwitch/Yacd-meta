@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import useLineChart from '../hooks/useLineChart';
-import { chartJSResource, chartStyles, commonDataSetProps } from '../misc/chart';
+import useLineChart from '../../hooks/useLineChart';
+import { chartJSResource, chartStyles, commonDataSetProps } from '../../misc/chart';
 
 const { useMemo } = React;
 

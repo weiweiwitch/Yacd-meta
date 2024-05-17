@@ -1,10 +1,10 @@
 import * as React from 'react';
 import ReactSwitch from 'react-switch';
 
+import { getTheme } from '~/store/app';
 import { State } from '~/store/types';
 
-import { getTheme } from '../store/app';
-import { connect } from './StateProvider';
+import { connect } from '../StateProvider';
 
 // workaround https://github.com/vitejs/vite/issues/2139#issuecomment-802981228
 // @ts-ignore

@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import BaseModal from '~/components/shared/BaseModal';
 
 import s from './ModalManageConnectionColumns.module.scss';
-import Switch from './SwitchThemed';
+import SwitchThemed from './shared/SwitchThemed';
 
 const getItemStyle = (isDragging, draggableStyle) => {
   return {
@@ -80,7 +80,7 @@ export default function ModalManageConnectionColumns({
                             <Menu />
                             <span className={s.columnManageLabel}>{t(column.Header)}</span>
                             <div className={s.columnManageSwitch}>
-                              <Switch
+                              <SwitchThemed
                                 size="mini"
                                 checked={show}
                                 onChange={(val) => onShowChange(column, val)}

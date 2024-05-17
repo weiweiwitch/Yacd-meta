@@ -7,13 +7,13 @@ import APIConfig from '~/components//APIConfig';
 import { About } from '~/components/about/About';
 import APIDiscovery from '~/components/APIDiscovery';
 import ErrorBoundary from '~/components/ErrorBoundary';
-import Home from '~/components/Home';
-import Loading from '~/components/Loading';
-import Loading2 from '~/components/Loading2';
+import Home from '~/components/home/Home';
 import { Head } from '~/components/shared/Head';
-import SideBar from '~/components/SideBar';
+import Loading from '~/components/shared/Loading';
+import Loading2 from '~/components/shared/Loading2';
+import SideBar from '~/components/shared/SideBar';
+import StyleGuide from '~/components/shared/StyleGuide';
 import StateProvider from '~/components/StateProvider';
-import StyleGuide from '~/components/StyleGuide';
 import { queryClient } from '~/misc/query';
 import { actions, initialState } from '~/store';
 

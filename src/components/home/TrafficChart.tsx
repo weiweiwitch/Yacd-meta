@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { fetchData } from '~/api/traffic';
+import { chartJSResource, chartStyles, commonDataSetProps } from '~/misc/chart';
+import { getClashAPIConfig, getSelectedChartStyleIndex } from '~/store/app';
 import { State } from '~/store/types';
 
-import { fetchData } from '../api/traffic';
-import useLineChart from '../hooks/useLineChart';
-import { chartJSResource, chartStyles, commonDataSetProps } from '../misc/chart';
-import { getClashAPIConfig, getSelectedChartStyleIndex } from '../store/app';
-import { connect } from './StateProvider';
+import useLineChart from '../../hooks/useLineChart';
+import { connect } from '../StateProvider';
 import s0 from './TrafficChart.module.scss';
 
 const { useMemo } = React;

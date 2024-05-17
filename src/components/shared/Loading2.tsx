@@ -1,7 +1,7 @@
 import React from 'react';
 
 import s0 from './Loading2.module.scss';
-import SvgYacd from './shared/SvgYacd';
+import SvgYacd from './SvgYacd';
 
 function Loading() {
   return (

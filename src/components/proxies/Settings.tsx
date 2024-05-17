@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 import Select from '~/components/shared/Select';
 
 import { getAutoCloseOldConns, getHideUnavailableProxies, getProxySortBy } from '../../store/app';
+import SwitchThemed from '../shared/SwitchThemed';
 import { connect, useStoreActions } from '../StateProvider';
-import Switch from '../SwitchThemed';
 import s from './Settings.module.scss';
 
 const options = [
@@ -55,7 +55,7 @@ function Settings({ appConfig }) {
       <div className={s.labeledInput}>
         <span>{t('hide_unavail_proxies')}</span>
         <div>
-          <Switch
+          <SwitchThemed
             name="hideUnavailableProxies"
             checked={appConfig.hideUnavailableProxies}
             onChange={handleHideUnavailablesSwitchOnChange}
@@ -65,7 +65,7 @@ function Settings({ appConfig }) {
       <div className={s.labeledInput}>
         <span>{t('auto_close_conns')}</span>
         <div>
-          <Switch
+          <SwitchThemed
             name="autoCloseOldConns"
             checked={appConfig.autoCloseOldConns}
             onChange={(v) => updateAppConfig('autoCloseOldConns', v)}
